@@ -1,10 +1,12 @@
-{
+{ "homepage": "https://https://Nardos-26.github.io/Netflix-Clone-2025",
   "name": "netflix-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -16,8 +18,10 @@
     "@mui/material": "^7.1.0",
     "axios": "^1.9.0",
     "dotenv": "^16.5.0",
+    "github": "^14.0.0",
     "movie-trailer": "^3.2.2",
     "node": "^24.0.1",
+    "pages": "^0.0.16",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-youtube": "^10.1.0"
