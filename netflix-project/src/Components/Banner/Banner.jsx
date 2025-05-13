@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./banner.css";
-import axios from "./utils/axios"; // import this instance manually not to confuse with actual axios import
-import requests from "./utils/requests";
+import axios from "../../Utils/axios"; 
+import requests from "../../Utils/requests";
+
 const Banner = () => {
   const [movie, setMovie] = useState({});
   useEffect(() => {
@@ -15,7 +16,7 @@ const Banner = () => {
           ]
         );
       } catch (error) {
-        console.log("error", error);
+        // console.log("error", error);
       }
     })();
   }, []);
