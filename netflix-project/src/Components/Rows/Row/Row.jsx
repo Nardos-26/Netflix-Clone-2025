@@ -11,16 +11,16 @@ const Row = ({ title, fetchUrl, isLargeRow}) => {
     const base_url = "https://image.tmdb.org/t/p/original";
 
     useEffect(() => {
-        (async () => {
-            try {
-                console.log(fetchUrl)
-                const request = await axios.get(fetchUrl);
-                console.log(request)
-                setMovie(request.data.results);
-            } catch (error) {
-                console.log("error", error);
-            }
-        })()
+      (async () => {
+        try {
+          console.log(fetchUrl);
+          const request = await axios.get(fetchUrl);
+        //   console.log(request);
+          setMovie(request.data.results);
+        } catch (error) {
+          console.log("error", error);
+        }
+      })();
     }, [fetchUrl]);
     
     const handleClick = (movie) => {
